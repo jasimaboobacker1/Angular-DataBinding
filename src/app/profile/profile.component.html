@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="content">
+        <div class="head" style="width: 100%;height: auto;    background-color: bisque;
+        display: flex;align-items: center;justify-content: center;padding: 10px; border-radius:7px;">
+        <h1>My Profile</h1></div>
+        <div class="details" style="width: 100%;height: 100%;padding: 10px;display: flex;justify-content: space-around;">
+        <div class="right">
+            <h3 style="margin-bottom:7px;">Name </h3>
+            <h3 style="margin-bottom:7px;">Email </h3>
+            <h3 style="margin-bottom:7px;">Phone Number </h3>
+            <div class="goal" style="width: 100%;height: 120px;"><h3 style="margin-bottom:7px;" >Career Goal</h3></div>
+            <div class="goal" style="width: 100%;height: auto;"><h3 style="margin-bottom:7px;">Skills</h3></div>
+            <h3 style="margin-bottom:7px;">Languages </h3>
+            <h3 style="margin-bottom:7px;">Hobbies </h3>
+            <h3 style="margin-bottom:7px;">GitHub </h3>
+            <input type="text" #mytitle (keyup)="KeyUp(mytitle.value)" placeholder="Enter Any Input Here" style="width: 100%;border: none;padding: 6px;background-color:white;border-radius: 6px;margin-bottom:7px;color:black;">
+            <div class="goal" style="width: 100%;height: 70px;"><h3 style="margin-bottom:7px;">Click here to change the red color to blue </h3></div>
+        </div>
+        <div class="left">
+            <h3 style="font-weight: 400;margin-bottom:7px;">: {{Name}}</h3>
+            <h3 style="font-weight: 400;margin-bottom:7px;">: {{email}}</h3>
+            <h3 style="font-weight: 400;margin-bottom:7px;">: {{phone}}</h3>
+            <div class="goal"  [class]="myclass"><h4 style="font-weight: 400;margin-bottom:7px;">:{{careergoal}}</h4></div>
+            <div class="goal"  [class.red]="false"><h3 style="font-weight: 400;margin-bottom:7px;">: {{skills}}</h3></div>
+            <h3 [style.color]="myclass" style="font-weight: 400;margin-bottom:7px;">: {{languages}}</h3>
+            <h3 [style.color]="status=='errorrr' ? 'red' : 'blue'" style="font-weight: 400;margin-bottom:9px;">: {{hobbies}}</h3>
+            <h3 style="font-weight: 400;margin-bottom:14px;">: {{Git}}</h3>
+            <h3 style="font-weight: 400;margin-bottom:6px;">:{{text}}</h3>
+            <div class="goal" style="width: 100%;height: 70px;display: flex;align-items: center;margin-bottom:7px;"> <h3 style="font-weight: 400;">:<button style="padding: 5px;border-radius: 6px;background-color: white;border:none;width:70px;margin-left: 6px;" (click)="change()">Click</button></h3></div>
+
+
+        </div>
+    </div>
+    </div>
+</div>
